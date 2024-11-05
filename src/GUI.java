@@ -39,13 +39,13 @@ public class GUI extends JFrame {
         reglasAhorcado = new ReglasAhorcado(cantidadJugadores, metaPuntos);
 
         //La acción que se realiza al presionar el botón de "Usar letra".
-        usarLetraButton.addActionListener(this::hacerTurnoJuego);
+        usarLetraButton.addActionListener(e -> hacerTurnoJuego());
 
         reglasAhorcado.inicializarRonda();
         actualizarGUI();
     }
 
-    private void hacerTurnoJuego(ActionEvent e) {
+    private void hacerTurnoJuego() {
         reglasAhorcado.jugarTurno(obtenerLetraSeleccionada());
         actualizarGUI();
         if (reglasAhorcado.rondaTerminada()) {
@@ -177,7 +177,7 @@ public class GUI extends JFrame {
     }
 
     private void mostrarMensajesFinalRonda() {
-        String ganadorString = reglasAhorcado.obtenerJugadorGanador().toString();
+        String ganadorString = reglasAhorcado.regresarNombreJugadorActual();
         String fraseDescubierta = reglasAhorcado.mostrarFraseDescubierta();
 
         JOptionPane.showMessageDialog(
