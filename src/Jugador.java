@@ -1,10 +1,11 @@
 public class Jugador {
-    private final String nombre;
+    private static int ID_COUNTER = 1;
+    private final int id;
     private int puntaje;
 
-    public Jugador(String nombre) {
-        this.nombre = nombre;
+    public Jugador() {
         puntaje = 0;
+        id = ID_COUNTER++;
     }
 
     /**
@@ -26,18 +27,16 @@ public class Jugador {
     }
 
     /**
-     * Muestra en la consola la puntuación de este jugador, junto con su nombre.
+     * Muestra en la consola la puntuación de este jugador, junto con su número de jugador.
+     *
+     * @return
      */
-    public void mostrarPuntaje() {
-        System.out.printf("Puntos de %s: %d%n", nombre, puntaje);
+    public String mostrarPuntaje() {
+        return String.format("Puntos J%d: %d", id, puntaje);
     }
 
-    /**
-     * Simplemente, regresa una cadena con el nombre del jugador.
-     * @return Nombre del jugador en String.
-     */
     @Override
     public String toString() {
-        return nombre;
+        return String.format("Jugador %d", id);
     }
 }
