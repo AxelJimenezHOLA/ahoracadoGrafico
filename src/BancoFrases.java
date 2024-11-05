@@ -44,7 +44,7 @@ public class BancoFrases {
         frases.add("SONIDOS QUE ENTRAN PROFUNDO");
         frases.add("CAMINOS LARGOS POR DESCUBRIR");
         frases.add("AROMAS DE FLORES FRESCAS");
-        frases.add("SALTANDO CHARCOS DESPUES DE LLUVER");
+        frases.add("SALTANDO CHARCOS DESPUES DE LLOVER");
         frases.add("EL VIENTO ME LLAMA");
         frases.add("HISTORIAS QUE SE TEJEN");
         frases.add("CRISTALES LUMINOSOS Y CLAROS");
